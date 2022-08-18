@@ -1,0 +1,112 @@
+{
+    "type": "bundle",
+    "id": "281fe97a-35d8-4b84-be2e-253047cc6274",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "identity",
+            "id": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "name": "shifter_proxy",
+            "identity_class": "events"
+        },
+        {
+            "id": "observed-data--8b261b85-9817-4d1a-8eb4-63d7c102405c",
+            "type": "observed-data",
+            "created_by_ref": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "created": "2022-08-14T21:12:35.830Z",
+            "modified": "2021-08-14T21:12:35.830Z",
+            "objects": {
+                "0": {
+                    "type": "network-traffic",
+                    "dst_port": 8000,
+                    "src_byte_count": 1251,
+                    "dst_ref": "1",
+                    "src_packets": 4,
+                    "dst_byte_count": 1251,
+                    "dst_packets": 4,
+                    "src_port": 39616,
+                    "src_ref": "8",
+                    "protocols": [
+                        "tcp",
+                        "ipv4"
+                    ]
+                },
+                   "1": {
+                    "type": "ipv4-addr",
+                    "value": "162.247.74.27"
+                },
+                "2": {
+                    "type": "x-ecs-process",
+                    "args": [
+                        "/opt/streamfwd/bin/streamfwd"
+                    ]
+                },
+                "3": {
+                    "type": "process",
+                    "name": "streamfwd",
+                    "pid": 1446,
+                    "binary_ref": "5",
+                    "creator_user_ref": "9",
+                    "opened_connection_refs": [
+                        "0"
+                    ]
+                },
+                "4": {
+                    "type": "x-oca-event",
+                    "process_ref": "3",
+                    "host_ref": "7",
+                    "duration": 9229638,
+                    "kind": "event",
+                    "module": "system",
+                    "start": "2021-01-14T12:34:00.021Z",
+                    "action": "network_flow",
+                    "end": "2021-01-14T12:34:00.030Z",
+                    "category": ["network_traffic"],
+                    "dataset": "socket",
+                    "user_ref": "9",
+                    "network_ref": "0"
+                },
+                "5": {
+                    "type": "file",
+                    "name": "streamfwd",
+                    "parent_directory_ref": "6"
+                },
+                "6": {
+                    "type": "directory",
+                    "path": "/opt/streamfwd/bin"
+                },
+                "7": {
+                    "type": "x-oca-asset",
+                    "hostname": "bgu-farsight2",
+                    "os_name": "Ubuntu",
+                    "os_version": "18.04.5 LTS (Bionic Beaver)",
+                    "os_platform": "ubuntu",
+                    "name": "bgu-farsight2",
+                    "id": "903daa5f5b044309a3587ae40c8fe066",
+                    "architecture": "x86_64"
+                },
+                "8": {
+                    "type": "ipv4-addr",
+                    "value": "10.10.11.221"
+                },
+                "9": {
+                    "type": "user-account",
+                    "user_id": "root",
+                    "account_login": "root"
+                },
+                "10": {
+                    "type": "x-ecs-user",
+                    "id": "0"
+                },
+                 "11": {
+                    "type": "x-ecs-network",
+                    "community_id": "1://wg3pTnzzE7uuSD7lFtJfZ+bwM=",
+                    "direction": "inbound"
+                }
+            },
+            "first_observed": "2022-08-14T12:34:00.520Z",
+            "last_observed": "2022-08-14T12:34:00.520Z",
+            "number_observed": 1
+        }
+    ]
+}
